@@ -1,0 +1,366 @@
+##======================================================================================
+# i3wm
+#
+##======================================================================================
+##======================================================================================
+
+set $mod Mod4
+
+##======================================================================================
+##======================================================================================
+
+# chose a FreeType font, such as:
+font pango:Droid Sans Mono 8
+
+##======================================================================================
+##======================================================================================
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+
+##======================================================================================
+##======================================================================================
+
+# start a terminal
+#bindsym $mod+Return exec xfce4-terminal --disable-server -T /bin/zsh
+
+bindsym $mod+Return exec urxvt -T /bin/zsh
+
+##======================================================================================
+##======================================================================================
+
+## inicio automatico de aplicativos
+exec --no-startup-id parcellite &
+exec --no-startup-id volumeicon
+exec --no-startup-id feh --bg-scale /home/zezao-slack/Imagens/wall1.jpg
+exec --no-startup-id xcompmgr -C
+exec --no-startup-id xset -dpms; xset s off
+
+##======================================================================================
+##======================================================================================
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+##======================================================================================
+##======================================================================================
+
+# start dmenu (a program launcher)
+
+#bindsym $mod+d exec dmenu_run
+
+bindsym $mod+d exec i3-dmenu-desktop --dmenu="/usr/bin/dmenu -i -l 8 -o 0.8 -fn 'Droid Sans Mono Bold-10' -x 10 -y 20 -w 300 -nb '#191919' -nf '#9ac0cd' -sb '#191919' -sf '#bf3f34' -p 'MENU➫'"
+
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+##======================================================================================
+##======================================================================================
+
+for_window [class="^.*"] border 1pixel
+
+new_window 1pixel
+new_float 1pixel
+
+##=========================================================================================
+##=========================================================================================
+
+gaps inner 4
+gaps outer 3
+
+
+##======================================================================================
+##======================================================================================
+
+#for_window [class="Gvim"] floating enable
+for_window [class="VirtualBox"] floating enable
+for_window [class="Dolphin"] floating enable
+for_window [class="Snes9x"] floating enable
+for_window [class="Evince"] floating enable
+for_window [class="Simplescreenrecorder"] floating enable
+for_window [class="Qjackctl"] floating enable
+for_window [class="Nvidia-settings"] floating enable
+#
+for_window [title="Wine desktop"] floating enable
+
+
+
+##======================================================================================
+##======================================================================================
+
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+##======================================================================================
+##======================================================================================
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+##======================================================================================
+##======================================================================================
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+##======================================================================================
+##======================================================================================
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+##======================================================================================
+##======================================================================================
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+##======================================================================================
+##======================================================================================
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+##======================================================================================
+##======================================================================================
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+##======================================================================================
+##======================================================================================
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+##======================================================================================
+##======================================================================================
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+##======================================================================================
+##======================================================================================
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+##======================================================================================
+##======================================================================================
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+##======================================================================================
+##======================================================================================
+
+# focus the child container
+#bindsym $mod+d focus child
+##======================================================================================
+##======================================================================================
+
+# switch to workspace
+bindsym $mod+1 workspace área➫I
+bindsym $mod+2 workspace área➫II
+bindsym $mod+3 workspace área➫III
+bindsym $mod+4 workspace área➫IV
+bindsym $mod+5 workspace área➫V
+bindsym $mod+6 workspace área➫VI
+bindsym $mod+7 workspace área➫VII
+bindsym $mod+8 workspace área➫VIII
+bindsym $mod+9 workspace área➫IX
+bindsym $mod+0 workspace área➫X
+
+
+##======================================================================================
+##======================================================================================
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace área➫I
+bindsym $mod+Shift+2 move container to workspace área➫II
+bindsym $mod+Shift+3 move container to workspace área➫III
+bindsym $mod+Shift+4 move container to workspace área➫IV
+bindsym $mod+Shift+5 move container to workspace área➫V
+bindsym $mod+Shift+6 move container to workspace área➫VI
+bindsym $mod+Shift+7 move container to workspace área➫VII
+bindsym $mod+Shift+8 move container to workspace área➫VIII
+bindsym $mod+Shift+9 move container to workspace área➫IX
+bindsym $mod+Shift+0 move container to workspace área➫X
+
+##======================================================================================
+##======================================================================================
+
+## switch to workspace
+#bindsym $mod+1 workspace área ➊
+#bindsym $mod+2 workspace área ➋
+#bindsym $mod+3 workspace área ➌
+#bindsym $mod+4 workspace área ➍
+#bindsym $mod+5 workspace área ➎
+#bindsym $mod+6 workspace área ➏
+#bindsym $mod+7 workspace área ➐
+#bindsym $mod+8 workspace área ➑
+#bindsym $mod+9 workspace área ➒
+#bindsym $mod+0 workspace área ➓
+
+# move focused container to workspace
+#bindsym $mod+Shift+1 move container to workspace área ➊
+#bindsym $mod+Shift+2 move container to workspace área ➋
+#bindsym $mod+Shift+3 move container to workspace área ➌
+#bindsym $mod+Shift+4 move container to workspace área ➍
+#bindsym $mod+Shift+5 move container to workspace área ➎
+#bindsym $mod+Shift+6 move container to workspace área ➏
+#bindsym $mod+Shift+7 move container to workspace área ➐
+#bindsym $mod+Shift+8 move container to workspace área ➑
+#bindsym $mod+Shift+9 move container to workspace área ➒
+#bindsym $mod+Shift+0 move container to workspace área ➓
+
+##======================================================================================
+##======================================================================================
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+
+##======================================================================================
+##======================================================================================
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+##======================================================================================
+##======================================================================================
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+##======================================================================================
+##======================================================================================
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+##======================================================================================
+##======================================================================================
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+##======================================================================================
+##======================================================================================
+
+# color defines for i3
+set $bg   #4c7899
+set $fg   #285577
+set $hi   #ffffff
+set $ac   #333333
+set $tx   #5f676a
+set $ia   #222222
+set $be   #888888
+set $yw   #2f343a
+set $gn   #5d5d5d
+set $rd   #900000
+set $sa   #545454
+set $aa   #468B14
+
+# set some nice colors      border     background    text
+
+client.focused              $gn        $ia           $hi
+client.unfocused            $ac        $sa           $be
+client.focused_inactive     $ac        $sa           $be
+client.urgent               $yw        $rd           $hi
+
+# set some nice colors border background text
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    position top
+    height 16
+    font pango:Droid Sans Mono Bold 8
+        status_command i3status
+        colors {
+        background $ia
+        statusline $be
+        separator  $gn
+
+        focused_workspace  $gn     $ia     $hi
+        active_workspace   $ac     $sa     $be
+        inactive_workspace $ac     $sa     $be
+        urgent_workspace   $yw     $rd     $hi
+    }
+}
+
