@@ -189,10 +189,6 @@ bindsym $mod+8 workspace área➫VIII
 bindsym $mod+9 workspace área➫IX
 bindsym $mod+0 workspace área➫X
 
-
-##======================================================================================
-##======================================================================================
-
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace área➫I
 bindsym $mod+Shift+2 move container to workspace área➫II
@@ -363,4 +359,3 @@ bar {
         urgent_workspace   $yw     $rd     $hi
     }
 }
-
