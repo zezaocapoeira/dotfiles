@@ -75,7 +75,7 @@ gaps outer 3
 ##======================================================================================
 ##======================================================================================
 
-#for_window [class="Gvim"] floating enable
+for_window [class="Gvim"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="Dolphin"] floating enable
 for_window [class="Snes9x"] floating enable
