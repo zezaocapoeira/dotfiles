@@ -1,0 +1,96 @@
+Xft.dpi:        85
+Xft.lcdfilter:  lcddefault
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! tema do cursor do mouse
+!Xcursor.theme_core: true
+!Xcursor.theme:  ComixCursors-Black
+Xcursor.theme:  ComixCursors-Orange
+
+! icone barra de titulo
+URxvt.iconFile:   /usr/share/icons/Tango/scalable/apps/terminal.svg
+
+
+! teclas home,end terminal urxvt
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+
+! teclas home,end nano-editor
+URxvt.keysym.Home: \033OH
+URxvt.keysym.End:  \033OF
+URxvt.keysym.KP_Home: \033OH
+URxvt.keysym.KP_End:  \033OF
+
+
+! transparencia real
+URxvt.depth: 32
+URxvt.background: [80]#000000
+
+! barra de rolagem
+URxvt.scrollBar: false
+
+
+!fontes urxvt:
+URxvt.font: xft:Droid Sans Mono:size=12
+
+
+!enabling clickable links:
+
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1
+
+!urxvt scrolling options and cursor style:
+
+URxvt*saveLines: 12000
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+
+! urxvt tabs settings:
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 2
+URxvt.tabbed.tab-bg: 8
+URxvt.tabbed.autohide:  yes
+URxvt.tabbed.new-button:  no
+URxvt.tabbed.title: no
+
+URxvt.mouseWheelScrollPage: true
+
+
+!urxvt color scheme:
+
+URxvt*background: #000000
+URxvt*foreground: #00AAAA
+
+URxvt*cursorColor: #AAAAAA
+URxvt*colorUL: #86a2b0
+
+!black
+ *color0:  #000000
+ *color8:  #555555
+!red
+ *color1:  #AA0000
+ *color9:  #FF5555
+!green
+ *color2:  #00AA00
+ *color10: #55FF55
+!yellow
+ *color3:  #AA5500
+ *color11: #FFFF55
+!blue
+ *color4:  #0000AA
+ *color12: #5555FF
+!magenta
+ *color5:  #AA00AA
+ *color13: #FF55FF
+!cyan
+ *color6:  #00AAAA
+ *color14: #55FFFF
+!white
+ *color7:  #AAAAAA
+ *color15: #FFFFFF
+
