@@ -13,6 +13,7 @@ Xcursor.theme:  ComixCursors-Orange
 ! icone barra de titulo
 URxvt.iconFile:   /usr/share/icons/Tango/scalable/apps/terminal.svg
 
+URxvt*termName: rxvt-256color
 
 ! teclas home,end terminal urxvt
 URxvt*keysym.Home: \033[1~
