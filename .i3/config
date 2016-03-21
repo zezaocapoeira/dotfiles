@@ -1,5 +1,5 @@
 ##======================================================================================
-# i3wm
+# i3wm-4.11
 #
 ##======================================================================================
 ##======================================================================================
@@ -331,21 +331,20 @@ set $yw   #2f343a
 set $gn   #5d5d5d
 set $rd   #900000
 set $sa   #545454
-set $aa   #468B14
 
-# set some nice colors      border     background    text
+# set some nice colors      border     background    text       indicator       child_border
 
-client.focused              $gn        $ia           $hi
-client.unfocused            $ac        $sa           $be
-client.focused_inactive     $ac        $sa           $be
-client.urgent               $yw        $rd           $hi
+client.focused              $gn        $ia           $hi          $bg             $gn
+client.unfocused            $ac        $sa           $be          $sa             $ac
+client.focused_inactive     $ac        $sa           $be          $sa             $ac
+client.urgent               $yw        $rd           $hi          $rd             $ac
 
 # set some nice colors border background text
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
     position top
-    height 16
+    height 18
     font pango:Droid Sans Mono Bold 8
         status_command i3status
         colors {
